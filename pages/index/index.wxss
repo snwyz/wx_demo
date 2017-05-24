@@ -1,0 +1,57 @@
+/**index.wxss**/
+.content{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+.content_item{
+   	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 150rpx;
+	margin-bottom: 10rpx; 
+}
+.item_left{
+    width: 20%;
+	height: 100%;
+	padding: 5rpx;
+	box-sizing: border-box;
+}
+.item_left image{
+    width: 100%;
+    height: 100%;
+}
+.item_right{
+	height: 100%;
+    width:65%;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+	display: flex;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    padding:5px;
+}
+.item_model{
+    padding: 10rpx;
+	height: 100%;
+	width: 90%;
+	box-sizing: border-box;
+}
+.item_model view{
+	width: 100%;
+	margin-bottom: 20rpx;
+}
+.play{
+	height: 100%;
+    width:18%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+  	align-items: center;
+      justify-content: center
+}
+.play image {
+	width: 28px;
+	height: 28px;
+}

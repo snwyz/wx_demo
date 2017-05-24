@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/play/play",
+    "pages/favmusic/favmusic",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#BC2F2E",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle":"#fff"
+  }
+  ,"tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "云音乐首页",
+      "iconPath": "images/music.png",
+      "selectedIconPath": "images/music-active.png"
+    },
+    {
+            "pagePath": "pages/favmusic/favmusic",
+            "text": "最爱音乐",
+            "iconPath": "images/my.png",
+            "selectedIconPath": "images/my-active.png"
+     }]    
+  }
+}

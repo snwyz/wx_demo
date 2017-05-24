@@ -1,0 +1,37 @@
+<!--index.wxml-->
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-color='#fff' indicator-active-color='#000'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%;height:100%;"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<scroll-view scroll-y="true" class="content">
+    <block wx:for="{{retrunData}}" wx:for-item="songs">
+            <view class="content_item" bindtap="trunPlay" data-id ="{{songs.id}}">
+                    <view class="item_left" >
+                    <image src="{{songs.album.picUrl}}" mode="widthFix"></image>
+            </view>
+            <view class="item_right">
+                <view class="item_model">
+                    <view>
+                    <text>{{songs.name}}</text>
+                    </view>
+                    <view>
+                    <text>{{songs.artitsts}}-{{songs.album.name}}</text>
+                    </view>  
+                </view>                          
+            </view>
+           <view class="play">
+                 <image src="../../images/more.png"></image>
+           </view>           
+           </view>       
+    </block>       
+</scroll-view>
+
+
+
+

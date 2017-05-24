@@ -1,0 +1,45 @@
+<!--pages/play/play.wxml-->
+<!--
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>-->
+<audio src="{{src}}" action="{{action}}" binderror="errorEvent" bindtimeupdate="timeupdateEvent" bindended="endEvent" style="display:none"></audio>
+
+
+<view class="content">
+      <image src="../../images/bg.jpg" class="imageBg"></image>  <!--背景图-->
+      <image src="src"></image><!--歌曲背景图-->
+      <view id="handlePic">
+            <image src="../../images/handle.png"></image>
+      </view>
+
+
+
+
+
+      <view id="rotateBg"> <!--背景图片区-->
+        <image src="../../images/play.png" id="xxx"></image>
+      </view> 
+    <view wx:if="{{!lyricHidden}}" id="container" class="play-container" animation="{{animationData}}" bindtap="switchbgEvent">
+	<view wx:for="{{lyricList}}" class="lyric {{item.time <= currentTime && item.endtime > currentTime ? 'selected' : ''}}">
+		<text wx:if="{{item.en}}">{{item.en}}</text>
+		<text wx:if="{{item.zh}}">{{item.zh}}</text>
+	</view>
+</view>
+<view class="footer">
+	<view class="progress">  <!--进度条-->
+		<text>{{timeText}}</text>
+		<progress percent="{{per}}" color="red" stroke-width="4"/>
+		<text>{{durationText}}</text>
+	</view>
+
+         <view class="ctrl_play">  <!--播放区-->
+            <image class="mode" mode="scaleToFill" bindtap="switchModeEvent" src="../../images/{{mode}}.png" />
+  		<image mode="scaleToFill" bindtap="prevEvent" src="../../images/prev.png" />
+  		<image mode="scaleToFill" bindtap="actionEvent" src="../../images/{{status === 'play' ? 'pause' : 'playm'}}.png" />
+  		<image mode="scaleToFill" bindtap="nextEvent" src="../../images/next.png" />
+  		<image class="fav" mode="scaleToFill" bindtap="favEvent" src="../../images/{{fav}}.png" />
+      </view>
+      
+</view>
+
+</view>
+
